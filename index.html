@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption | Home</title>
+    <link href="CSS/style.css" rel="stylesheet"> 
+</head>
+<body>
+    <header>🐶🐱 Adopt a Pet Today! 🐶🐱</header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="displaypets.php">Available Pets</a>
+        <a href="displayMyPets.php">My Posts</a>
+        <a href="uploadPet.php">Adoption Process</a>
+        <a href="#">Contact Us</a>
+		<a href="login.html">Login</a>
+    </nav>
+    
+    <div class="container">
+        <div class="description">
+            <p>Welcome to our pet adoption platform! Here, you can find adorable puppies and kittens looking for loving homes. Browse available pets or post an adoption listing to help find a perfect match!</p>
+        </div>
+        
+        <div class="slider">
+            <div class="slides">
+                <img src="Images/1.jpg" alt="">
+                <img src="Images/2.jpg" alt="">
+				<img src="Images/3.jpg" alt="">
+			  <img src="Images/4.jpg" alt="">
+				<img src="Images/5.jpg" alt="">
+				<img src="Images/6.jpg" alt="">
+				
+          </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Pet Adoption. All rights reserved. | <a href="#">Copyright</a></p>
+        <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+    
+    <script>
+        let index = 0;
+        function slideShow() {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.children.length;
+            index = (index + 1) % totalSlides;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        setInterval(slideShow, 3000);
+    </script>
+</body>
+</html>
